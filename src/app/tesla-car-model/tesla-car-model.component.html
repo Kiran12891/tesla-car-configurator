@@ -1,0 +1,18 @@
+<h2>{{step1}}: {{chooseModel}}</h2>
+<form [formGroup]="teslaCarModelForm">
+    <label>{{modelDropdown}}: </label>
+    <select formControlName="selectedCarModel" id="selectedCarModel" (change)="modelChange()">
+        <option value="">{{chooseDropdown}}</option>
+        <ng-container *ngFor="let model of modelList;">
+            <option [value]='model.code'>{{model.description}}</option>
+        </ng-container>
+    </select>
+    <ng-container *ngIf="teslaCarModelForm.controls['selectedCarModel'].valid">
+        <label>{{colorDropdown}}: </label>
+        <select formControlName="modelColor" id="selColor">
+            <ng-container *ngFor="let color of colorList;">
+                <option [value]='color.code'>{{color.description}}</option>
+            </ng-container>
+        </select>
+    </ng-container>
+</form>

@@ -1,0 +1,7 @@
+<div class="tab-container">
+    <ng-container *ngFor="let tabName of tabs">
+        <button [class.active]="tabName === currentTab" (click)="tabChanged(tabName)" id="{{tabName}}"
+            [ngStyle]="{'cursor': (isTabDisabled(tabName)? 'not-allowed':'pointer')}"
+            [disabled]="isTabDisabled(tabName)">{{tabName}}</button>
+    </ng-container>
+</div>
