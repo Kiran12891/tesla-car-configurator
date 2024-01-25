@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
-import { Model, SelectedConfig } from '../interfaces/model.interface';
-import { ConfigDetail, ModelConfig } from '../interfaces/modelConfigData.interface';
+import { ConfigDetail, Model, ModelConfig, SelectedConfig } from '../interfaces/model.interface';
 
 @Injectable({
   providedIn: 'root'

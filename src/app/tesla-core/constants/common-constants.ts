@@ -1,3 +1,4 @@
+// tesla car tab & main constants
 export const chooseDropdown = 'Choose...';
 export const step1 = "Step 1";
 export const step2 = "Step 2";

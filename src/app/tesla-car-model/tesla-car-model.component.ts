@@ -28,7 +28,7 @@ export class TeslaCarModelComponent {
     modelColor: new FormControl('', [Validators.required]),
   })
 
-  constructor(private carDataService: TeslaDataService, private sharedDataService: SharedDataService) { }
+  constructor(private teslaDataService: TeslaDataService, private sharedDataService: SharedDataService) { }
 
   ngOnInit() {
     this.initData();
@@ -64,7 +64,7 @@ export class TeslaCarModelComponent {
 
   initData() {
     if (!this.sharedDataService.storeModelData) {
-      this.carDataService.getModelDataList().pipe(takeUntil(this.unSubscribe$)).subscribe((data) => {
+      this.teslaDataService.getModelDataList().pipe(takeUntil(this.unSubscribe$)).subscribe((data) => {
         this.modelList = data;
         this.sharedDataService.storeModelData = data;
       });

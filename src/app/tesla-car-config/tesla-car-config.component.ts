@@ -3,10 +3,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Subject, takeUntil } from 'rxjs';
-import { Config, ModelConfig } from '../tesla-core/interfaces/modelConfigData.interface';
 import { TeslaDataService } from '../tesla-core/services/test-data-service';
 import { SharedDataService } from '../tesla-core/services/shared-data.service';
 import { chooseDropdown, configText, cost, maxSpeed, miles, range, selectConfigOptionText, step2, towHitch, yokeWheel } from '../tesla-core/constants/common-constants';
+import { Config, ModelConfig } from '../tesla-core/interfaces/model.interface';
 
 @Component({
   selector: 'app-tesla-car-config',
@@ -66,7 +66,7 @@ export class TeslaCarConfigComponent {
     }
 
     let saveTeslaCarModelInfo = this.sharedDataService.saveTeslaCarModelInfo;
-    if (this.sharedDataService.isSelModelUpdated) {     
+    if (this.sharedDataService.isSelModelUpdated) {
       this.teslaCarConfigForm.reset(this.initialValues);
       this.sharedDataService.isSelModelUpdated = false;
       this.getModelConfigDetails(saveTeslaCarModelInfo.model.code)

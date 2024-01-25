@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ModelConfig } from '../interfaces/modelConfigData.interface';
-import { Model } from '../interfaces/model.interface';
+import { Model, ModelConfig } from '../interfaces/model.interface';
 
 @Injectable()
 export class TeslaDataService {

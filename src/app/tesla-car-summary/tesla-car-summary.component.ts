@@ -2,8 +2,7 @@ import { CurrencyPipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { chooseDropdown, maxSpeed, miles, range, step3, summary, teslaModel, totalCost, towHitchPack, towHitchPackage, yokePackage, yokeWheelPack } from '../tesla-core/constants/common-constants';
-import { ConfigDetail } from '../tesla-core/interfaces/modelConfigData.interface';
-import { Color, ModelWithoutColors } from '../tesla-core/interfaces/model.interface';
+import { Color, ConfigDetail, ModelWithoutColors } from '../tesla-core/interfaces/model.interface';
 import { SharedDataService } from '../tesla-core/services/shared-data.service';
 
 @Component({
